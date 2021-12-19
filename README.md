@@ -1,7 +1,7 @@
 # An-Automated-Approach-for-Electric-Network-Frequency-Estimation-in-Static-and-Non-Static-Digital-Video-Recordings
+This is a Matlab implementation of An-Automated-Approach-for-Electric-Network-Frequency-Estimation-in-Static-and-Non-Static-Digital-Video-Recordings journal paper.
 
-
-
+# run main_VIDEO.m
 
 
 
