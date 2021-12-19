@@ -1,4 +1,4 @@
-# An-Automated-Approach-for-Electric-Network-Frequency-Estimation-in-Static-and-Non-Static-Digital-Vid
+# An-Automated-Approach-for-Electric-Network-Frequency-Estimation-in-Static-and-Non-Static-Digital-Video-Recordings
 
 
 
