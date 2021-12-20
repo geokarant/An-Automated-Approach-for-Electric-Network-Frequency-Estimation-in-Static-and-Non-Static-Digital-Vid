@@ -8,23 +8,6 @@ tic
 for i=1:fix(frames);
     frame = read(v,i);
     
-%  classic approach
-%     I = rgb2gray(frame);
-% 
-%     y(i)=mean(mean(I));
-%     
-    
-% 
-% %%% STATIC REGIONS ONLY
-% 
-%     if i==1
-%     I = rgb2gray(frame);
-%     end
-% 
-%     A = rgb2gray(frame);
-%     Z = imabsdiff(A,I);   
-%     idx=Z<15;
-%     y(i) = mean(A(idx));
 
 
     %%%proposed SLIC approach
@@ -99,14 +82,4 @@ legend('\nu=41','\nu=81','\nu=311','\nu=511')
 
 
 
-
-tdump=1:686;
-figure (3)
-set(gcf, 'Position', get(0,'Screensize'),'PaperPositionMode','auto')
-plot(tdump,ENF);
-hold on
-xlabel('Time (s)','Fontsize',25)
-ylabel('Frequency (Hz)','Fontsize',25)
-%xlim([0 1800])
-ylim([49.96 50.03])
 
