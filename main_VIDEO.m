@@ -56,7 +56,7 @@ data_filtered=bpfilt(y,Fs,F_pass1,F_pass2,N);  % bandpass data filtering
 framesec=17 ;
 nffttimes=4;
 ENF = enfest(data_filtered,framesec,nffttimes,Fs);  % enf estimation
- ENF = enfestESPRIT(data_filtered,framesec,nffttimes,Fs);  % enf estimation with ESPRIT - comment the previous line if you want to run for ESPRIT
+ENF = enfestESPRIT(data_filtered,framesec,nffttimes,Fs);  % enf estimation with ESPRIT - comment the previous line if you want to run for ESPRIT
 [MCC,MCC_ind,MSDE,MSDE_ind] = match(GT_ENF,ENF);   % corcoef and mSDE
 
 
