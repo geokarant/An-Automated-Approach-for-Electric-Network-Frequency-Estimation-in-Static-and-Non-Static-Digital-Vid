@@ -38,11 +38,11 @@ toc
  
 
 %data_filtered=bandpass(Y,[49.9 50.1],Fs);
-F_pass1=9.9;
+F_pass1=9.9;    % choose between 1st and 2nd harmonic
 F_pass2=10.1;
 
-F_pass1=9.69;
-F_pass2=9.89;
+%F_pass1=9.69;  % choose between 1st and 2nd harmonic
+%F_pass2=9.89;
 
 N= 511;
 Fs=30;
