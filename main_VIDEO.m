@@ -1,7 +1,7 @@
 
 % read video and compute mean pixel value per frame
 
-v = VideoReader('MOV3_20190512_215145A.mp4');
+v = VideoReader('MOV1_20190505_110016A.mp4');
 frames=v.Duration*29.98;
 
 tic
