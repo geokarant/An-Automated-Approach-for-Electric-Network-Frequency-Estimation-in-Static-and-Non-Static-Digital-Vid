@@ -44,42 +44,47 @@ F_pass2=10.1;
 %F_pass1=9.69;  % choose between 1st and 2nd harmonic
 %F_pass2=9.89;
 
-N= 511;
+nffttimes=4;
 Fs=30;
 
-clear ENF
 
 
-data_filtered=bpfilt(y,Fs,F_pass1,F_pass2,N);  % bandpass data filtering
+k=1;
+a=1;
+b=2;
 
 
-framesec=17 ;
-nffttimes=4;
-%ENF = enfest(data_filtered,framesec,nffttimes,Fs);  % enf estimation
-ENF = enfestESPRIT(data_filtered,framesec,nffttimes,Fs);  % enf estimation with ESPRIT - comment the previous line if you want to run for ESPRIT
-[MCC,MCC_ind,MSDE,MSDE_ind] = match(GT_ENF,ENF);   % corcoef and mSDE
+ordervals=[41,81,311,511]; % filter orders N
+nn = numel(ordervals);
 
 
+for i=1:nn;
+        k=1;
+    for framesec=1:4:90
+        N = ordervals(i);
+        data_filtered=bpfilt(y,Fs,F_pass1,F_pass2,N);  % bandpass data filtering
+    	ENF = enfest(data_filtered,framesec,nffttimes,Fs);  % enf estimation
 
+    	[MCC,MCC_ind,MSDE,MSDE_ind] = match(GT_ENF,ENF);   % corcoef and mSDE
 
+        results_stft(a,k)=framesec;
+        results_stft(b,k)=MCC(1,2);
+        k=k+1;
+    end
+ a=a+2;
+ b=b+2;
+end
 
 
 figure (3)
 set(gcf, 'Position', get(0,'Screensize'),'PaperPositionMode','auto')
-plot(results_stft_n41(1,:),results_stft_n41(2,:));
+plot(results_stft(1,:),results_stft(2,:));
 hold on
-plot(results_stft_With_slic_81(1,1:23),results_stft_With_slic_81(2,1:23),'-o');
-plot(results_stft_n311(1,:),results_stft_n311(2,:),'-x');
-plot(results_stft_n511(1,:),results_stft_n511(2,:),'--');
+plot(results_stft(1,1:23),results_stft(4,:),'-o');
+plot(results_stft(1,:),results_stft(6,:),'-x');
+plot(results_stft(1,:),results_stft(8,:),'--');
 grid on
 xlabel('Segment duration D (s)','Fontsize',25)
 ylabel('MCC','Fontsize',25)
 legend('\nu=41','\nu=81','\nu=311','\nu=511')
-%xlim([0 1800])
-%ylim([49.96 50.03])
-
-
-
-
-
 
