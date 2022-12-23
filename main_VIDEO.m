@@ -2,7 +2,7 @@
 load('GT_ENF'); %load ground truth ENF values
 
 % read video and compute mean pixel value per frame
-v = VideoReader('MOV1_20190505_110016A.mp4');
+v = VideoReader('MOV1_20190505_110016A.mp4');  % Video can be found in https://zenodo.org/record/3549379#.Y6WRPXZByUk
 frames=v.Duration*29.98;
 
 tic
