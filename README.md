@@ -3,13 +3,14 @@ This is a Matlab implementation of "An-Automated-Approach-for-Electric-Network-F
 
 # run main_VIDEO.m
 
-In order to run the framework developed in the proposed work for automated ENF estimation in static and non-static digital video recordings, run the script main_VIDEO.m. Note: main_VIDEO.m takes as input an .mp4 file of the recorded video and a ground truth ENF signal. Its output derives the maximum correlation coefficient between the estimated ENF and the ground truth.
+In order to run the framework developed in the proposed work for automated ENF estimation in static and non-static digital video recordings, run the script main_VIDEO.m. main_VIDEO.m takes as input an .mp4 file of the recorded video and a ground truth ENF signal. Its output derives the maximum correlation coefficient between the estimated ENF and the ground truth.
 
 Running the script, Figure 5 of the paper will be reproduced. For this example, a specific .mp4 video and the accompanied ENF ground truth values (GT_ENF variable) are given as input. The code was implemented by employing MATLAB R2016a.
 
 The employed dataset can be downloaded from: https://zenodo.org/record/3549379#.Y6WRPXZByUk
 Fernandez-Menduina, S. and Pérez-González, F. "ENF Moving Video Database". 2020.
 
+Note: If video codecs are missing in your PC, matlab will instruct you to install the necessary video codecs enabling reading the video.
 
 # Cite
 If you find this code useful in your research, please consider citing:
