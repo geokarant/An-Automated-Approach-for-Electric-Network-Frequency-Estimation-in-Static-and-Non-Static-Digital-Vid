@@ -7,7 +7,7 @@ In order to run the framework developed in the proposed work for automated ENF e
 
 Running the script, Figure 5 of the paper will be reproduced. For this example, a specific .mp4 video and the accompanied ENF ground truth values (GT_ENF variable) are given as input. The code was implemented by employing MATLAB R2016a.
 
-The employed dataset can be downloaded from: https://zenodo.org/record/3549379#.Y6WRPXZByUk
+The employed dataset can be downloaded from: https://zenodo.org/record/3549379#.Y6WRPXZByUk //
 Fernandez-Menduina, S. and Pérez-González, F. "ENF Moving Video Database". 2020.
 
 Note: If video codecs are missing in your PC, matlab will instruct you to install the necessary video codecs enabling reading the video.
